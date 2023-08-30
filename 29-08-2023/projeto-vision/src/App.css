@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  border: 1px solid red;
+}
+
+main {
+  display: flex;
+}
+
+section {
+  max-width: 400px;
+  width: 100%;
+  margin-right: 10px;
+  border: 1px solid red;
+}
