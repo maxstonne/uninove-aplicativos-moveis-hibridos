@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./style.css";
 
 export function Header(props) {
@@ -7,4 +8,8 @@ export function Header(props) {
       <h1>{props.title}</h1>
     </header>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string
 }
