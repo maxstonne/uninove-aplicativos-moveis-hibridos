@@ -1,6 +1,7 @@
 import { Header } from "./components/Header"
 
 import "./App.css";
+import { Contador } from "./components/Contador";
 
 function App() {
   const listas = [
@@ -13,6 +14,11 @@ function App() {
       nome: "Projeto do Mar",
       responsavel: "Fonseca",
       valor: 4000,
+    },
+    {
+      nome: "Zéquinha",
+      responsavel: "Felipinho",
+      valor: 8000,
     },
   ];
 
@@ -40,15 +46,14 @@ function App() {
           <h1>Lista de projetos</h1>
           
           <article className="listas">
-            
+
             {listas.map((item, index) => {
-              console.log("quem é esse cara", item);
 
               return (
                 <div key={index}>
-                  <strong>Nome: </strong> <span>Giovanni</span>
-                  <strong>Responsável: </strong> <span>Fulano</span>
-                  <strong>Valor: </strong> <span>17:00</span>
+                  <strong>Nome: </strong> <span>{item.nome}</span>
+                  <strong>Responsável: </strong> <span>{item.responsavel}</span>
+                  <strong>Valor: </strong> <span>{item.valor}</span>
                 </div>
               )
             })}
@@ -56,6 +61,8 @@ function App() {
 
         </section>
       </main>
+
+      <Contador />
     </div>
   );
 }
